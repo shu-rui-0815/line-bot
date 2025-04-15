@@ -5,6 +5,8 @@ from linebot.models import (
 )
 
 def handle(msg):
+    print(f"[news.handle] 收到 msg：{repr(msg)}")
+
     msg = msg.strip()
 
     if msg not in ["食安新聞"]:
