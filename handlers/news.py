@@ -16,7 +16,7 @@ def handle(msg):
 
     bubbles.append(BubbleContainer(
         hero=ImageComponent(
-            url="https://via.placeholder.com/300x200.png?text=No+Image",
+            url="https://images.pexels.com/photos/161688/medical-tablets-pills-drug-161688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
             aspectRatio="20:13",
             aspectMode="cover"
@@ -41,7 +41,7 @@ def handle(msg):
 
     bubbles.append(BubbleContainer(
         hero=ImageComponent(
-            url="https://via.placeholder.com/300x200.png?text=No+Image",
+            url="https://images.pexels.com/photos/6475988/pexels-photo-6475988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
             aspectRatio="20:13",
             aspectMode="cover"
