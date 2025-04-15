@@ -18,7 +18,6 @@ def handle(msg):
         hero=ImageComponent(
             url="https://images.pexels.com/photos/161688/medical-tablets-pills-drug-161688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
-            aspectRatio="1.51:1",
             aspectMode="cover"
         ),
         body=BoxComponent(
@@ -43,7 +42,6 @@ def handle(msg):
         hero=ImageComponent(
             url="https://images.pexels.com/photos/6475988/pexels-photo-6475988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
-            aspectRatio="1.51:1",
             aspectMode="cover"
         ),
         body=BoxComponent(
@@ -68,7 +66,6 @@ def handle(msg):
         hero=ImageComponent(
             url="https://images.pexels.com/photos/3862603/pexels-photo-3862603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
-            aspectRatio="1.51:1",
             aspectMode="cover"
         ),
         body=BoxComponent(
