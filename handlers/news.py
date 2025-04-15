@@ -14,7 +14,7 @@ def handle(msg):
 
     bubbles.append(BubbleContainer(
         hero=ImageComponent(
-            url="https://i.epochtimes.com/assets/uploads/2021/07/id13090373-shutterstock_210587053-600x400.jpg",
+            url="",
             size="full",
             aspectRatio="20:13",
             aspectMode="cover"
@@ -39,7 +39,7 @@ def handle(msg):
 
     bubbles.append(BubbleContainer(
         hero=ImageComponent(
-            url="http://www.yungjia.com.tw/UpFile/2/Image/2021-04/13481612567.jpg",
+            url="",
             size="full",
             aspectRatio="20:13",
             aspectMode="cover"
