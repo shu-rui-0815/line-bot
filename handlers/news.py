@@ -40,30 +40,6 @@ def handle(msg):
 
     bubbles.append(BubbleContainer(
         hero=ImageComponent(
-            url="https://images.pexels.com/photos/6475988/pexels-photo-6475988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            size="full",
-            aspectMode="cover"
-        ),
-        body=BoxComponent(
-            layout="vertical",
-            contents=[
-                TextComponent(text="安心對抗青春痘「藥」這樣用！", weight="bold", size="lg", wrap=True),
-                TextComponent(text="青春痘（痤瘡）是常見的皮膚問題，春夏交替時，溫度和濕度變化易加重不適...", wrap=True, size="sm", margin="md")
-            ]
-        ),
-        footer=BoxComponent(
-            layout="vertical",
-            contents=[
-                ButtonComponent(
-                    action=URIAction(label="閱讀更多", uri="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t623502"),
-                    style="primary"
-                )
-            ]
-        )
-    ))
-
-    bubbles.append(BubbleContainer(
-        hero=ImageComponent(
             url="https://images.pexels.com/photos/3862603/pexels-photo-3862603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
             aspectMode="cover"
@@ -80,6 +56,30 @@ def handle(msg):
             contents=[
                 ButtonComponent(
                     action=URIAction(label="閱讀更多", uri="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t623490"),
+                    style="primary"
+                )
+            ]
+        )
+    ))
+    
+    bubbles.append(BubbleContainer(
+        hero=ImageComponent(
+            url="https://images.pexels.com/photos/6475988/pexels-photo-6475988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            size="full",
+            aspectMode="cover"
+        ),
+        body=BoxComponent(
+            layout="vertical",
+            contents=[
+                TextComponent(text="安心對抗青春痘「藥」這樣用！", weight="bold", size="lg", wrap=True),
+                TextComponent(text="青春痘（痤瘡）是常見的皮膚問題，春夏交替時，溫度和濕度變化易加重不適...", wrap=True, size="sm", margin="md")
+            ]
+        ),
+        footer=BoxComponent(
+            layout="vertical",
+            contents=[
+                ButtonComponent(
+                    action=URIAction(label="閱讀更多", uri="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t623502"),
                     style="primary"
                 )
             ]
