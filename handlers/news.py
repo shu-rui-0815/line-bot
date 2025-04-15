@@ -18,7 +18,7 @@ def handle(msg):
         hero=ImageComponent(
             url="https://images.pexels.com/photos/161688/medical-tablets-pills-drug-161688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
-            aspectRatio="20:13",
+            aspectRatio="1.51:1",
             aspectMode="cover"
         ),
         body=BoxComponent(
@@ -43,7 +43,7 @@ def handle(msg):
         hero=ImageComponent(
             url="https://images.pexels.com/photos/6475988/pexels-photo-6475988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             size="full",
-            aspectRatio="20:13",
+            aspectRatio="1.51:1",
             aspectMode="cover"
         ),
         body=BoxComponent(
@@ -58,6 +58,31 @@ def handle(msg):
             contents=[
                 ButtonComponent(
                     action=URIAction(label="閱讀更多", uri="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t623502"),
+                    style="primary"
+                )
+            ]
+        )
+    ))
+
+    bubbles.append(BubbleContainer(
+        hero=ImageComponent(
+            url="https://images.pexels.com/photos/3862603/pexels-photo-3862603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            size="full",
+            aspectRatio="1.51:1",
+            aspectMode="cover"
+        ),
+        body=BoxComponent(
+            layout="vertical",
+            contents=[
+                TextComponent(text="食藥署說明今日媒體報導「藥界籲縮短藥品入庫效期」一事", weight="bold", size="lg", wrap=True),
+                TextComponent(text="有關今日多家媒體報導「藥界籲縮短藥品入庫效期」一事，食品藥物管理署(以下簡稱食藥署)說明如下...", wrap=True, size="sm", margin="md")
+            ]
+        ),
+        footer=BoxComponent(
+            layout="vertical",
+            contents=[
+                ButtonComponent(
+                    action=URIAction(label="閱讀更多", uri="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t623490"),
                     style="primary"
                 )
             ]
