@@ -13,12 +13,6 @@ def handle(msg):
     bubbles = []
 
     bubbles.append(BubbleContainer(
-        hero=ImageComponent(
-            url="",
-            size="full",
-            aspectRatio="20:13",
-            aspectMode="cover"
-        ),
         body=BoxComponent(
             layout="vertical",
             contents=[
@@ -38,12 +32,6 @@ def handle(msg):
     ))
 
     bubbles.append(BubbleContainer(
-        hero=ImageComponent(
-            url="",
-            size="full",
-            aspectRatio="20:13",
-            aspectMode="cover"
-        ),
         body=BoxComponent(
             layout="vertical",
             contents=[
