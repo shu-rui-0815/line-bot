@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from handlers import default, faq, news
 
 load_dotenv()
@@ -23,19 +23,21 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text.strip()
-    # reply = faq.handle(msg)
+    msg = event.message.text
 
-    # if reply is None:
-    #     reply = news.handle(msg)
+    reply = faq.handle(msg)
 
-    # if reply is None:
-    #     reply = default.fallback(msg)
+    if reply is None:
+        reply = news.handle(msg)
 
-    # if reply is not None:
-    #     line_bot_api.reply_message(event.reply_token, reply)
-    # else:
-    #     print("沒有任何模組回應！")
+    if reply is None:
+        reply = default.fallback(msg)
+
+    if reply is not None:
+        line_bot_api.reply_message(event.reply_token, reply)
+    else:
+        print("沒有任何模組回應！")
+        line_bot_api.reply_message(event.reply_token, reply)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
