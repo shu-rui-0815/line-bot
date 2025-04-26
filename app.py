@@ -17,7 +17,7 @@ def ask_ollama(prompt):
     url = "http://localhost:11434/api/generate"
     headers = {"Content-Type": "application/json"}
     data = {
-        "model": "phi3:mini", 
+        "model": "deepseek-r1:1.5b", 
         "prompt": prompt,
         "stream": False
     }
