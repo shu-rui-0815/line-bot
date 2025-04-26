@@ -24,6 +24,10 @@ def ask_ollama(prompt):
     try:
         response = requests.post(url, headers=headers, json=data)
         response.raise_for_status()  # 如果回傳錯誤，會拋出例外
+
+        # 印出 response 內容來檢查回應格式
+        print(f"Ollama 回應內容: {response.text}")
+        
         result = response.json()
         return result.get("response", "很抱歉，AI 回覆失敗了喔。")
     except Exception as e:
