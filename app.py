@@ -30,9 +30,12 @@ def ask_ollama(prompt):
         
         result = response.json()
         return result.get("response", "很抱歉，AI 回覆失敗了喔。")
-    except Exception as e:
-        print(f"Ollama 錯誤：{e}")
-        return "很抱歉，目前無法取得 AI 回覆。"
+    except requests.exceptions.RequestException as e:
+        print(f"Ollama 請求錯誤：{e}")
+        return "很抱歉，無法聯繫 Ollama。"
+    except ValueError as e:
+        print(f"Ollama 回應錯誤：{e}")
+        return "Ollama 回應格式錯誤。"
 
 @app.route("/callback", methods=["POST"])
 def callback():
